@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hustler</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #f7f9fb;
+    }
+
+    header {
+      background: #002244;
+      color: #ffcc00;
+      padding: 100px 20px;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #011d3c;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .intro {
+      background: #f4f4f4;
+      font-size: 1.2rem;
+      line-height: 1.8;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      text-align: justify;
+    }
+
+    .dashboard-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .circle-button {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background-color: #0055a5;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+      padding: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .circle-button:hover {
+      border-radius: 25px;
+      background-color: #003366;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+
+    input, select {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #002244;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <header>WELCOME TO HUSTLER</header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+
+  <section id="home">
+    <div class="intro">
+      <p>Hustler is a platform built by and for finance professionals such as CA, CS, CMA, and semi-qualified candidates who want to utilize their time and skills for real-world assignments. Whether you're looking for freelance tasks or wish to offer finance-related services, Hustler bridges that connection with clients who need support.</p>
+    </div>
+  </section>
+
+  <section id="dashboard">
+    <h2>Choose Your Action</h2>
+    <div class="dashboard-buttons">
+      <div class="circle-button" onclick="window.open('#hustler-form')">Hire for Job/Assignment<br>(CA, CS, CMA, CISA, ACCA, Semi-qualified, Finance Grads)</div>
+      <div class="circle-button" onclick="window.open('#services-form')">Client Services<br/>(Mandatory Info Required)</div>
+    </div>
+
+    <div id="hustler-form">
+      <h3>Hustler Registration</h3>
+      <form action="YOUR_HUSTLER_GOOGLE_SCRIPT_URL" method="POST">
+        <input type="text" name="Name" placeholder="Name" required />
+        <input type="email" name="Email" placeholder="Email" required />
+        <input type="text" name="Firm" placeholder="Firm Name (if any)" />
+        <input type="text" name="Location" placeholder="Location" required />
+        <input type="text" name="Aadhaar" placeholder="Aadhaar Card (12 digits)" pattern="\d{12}" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div id="services-form">
+      <h3>Client Services Request</h3>
+      <form action="YOUR_CLIENT_GOOGLE_SCRIPT_URL" method="POST">
+        <select name="Service" required>
+          <option>ITR Filing</option>
+          <option>GST Return</option>
+          <option>Tax Consultancy</option>
+          <option>Statutory Audit</option>
+          <option>Internal Audit</option>
+          <option>Physical Verification</option>
+          <option>Others (Certification)</option>
+        </select>
+        <input type="text" name="Name" placeholder="Name" required />
+        <input type="email" name="Email" placeholder="Email" required />
+        <input type="text" name="Location" placeholder="Location" required />
+        <input type="text" name="Aadhaar" placeholder="Aadhaar Card (12 digits)" pattern="\d{12}" required />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/917977667420">7977667420</a></p>
+    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:choudharymadan2001@gmail.com">choudharymadan2001@gmail.com</a></p>
+  </section>
+</body>
+</html>
